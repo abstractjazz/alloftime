@@ -1,4 +1,25 @@
 
+const deviceType = () => {
+  const ua = navigator.userAgent;
+  if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+      return "tablet";
+  }
+  else if (/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
+      return "mobile";
+  }
+  return "desktop";
+};
+
+const canvas = document.getElementById('#defaultCanvas0')
+const mobileMessage=document.getElementById('#mobile-message')
+
+if (deviceType() == "tablet" || deviceType() == "mobile") {
+  canvas.remove();
+  mobileMessage.style.display="block"
+}
+
+
+
 var boxSz = 2400;
 var numSpheres = 3000;
 let numPlanets = 11;
@@ -20,7 +41,7 @@ let colorStartG;
 let colorStartB;
 let s;
 let colorGauge;
-const space=select('.p5Canvas')
+// const space=select('.p5Canvas')
 
 
 
@@ -58,7 +79,7 @@ function setup() {
 }
 
 function draw() {
-  canvas.onclick=function(){colorChange}
+  // canvas.onclick=function(){colorChange}
   let volume = map(height-mouseY, 0, width, 0, 1);
   background(0)
   song.amp(volume)

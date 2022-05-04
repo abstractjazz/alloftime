@@ -1,8 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Corinthia:wght@700&family=Londrina+Outline&family=Oswald:wght@200;300;400&family=Radio+Canada:wght@700&family=Red+Hat+Mono:ital,wght@0,500;1,500;1,700&family=Rubik+Bubbles&display=swap');
+
 html, body {
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1em;
 }
 
 canvas {
   display: block;
+}
+
+#mobile-message {
+  display: none;
 }
