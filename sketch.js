@@ -1,3 +1,4 @@
+const { Body } = require("matter");
 
 const deviceType = () => {
   const ua = navigator.userAgent;
@@ -13,8 +14,10 @@ const deviceType = () => {
 const canvas = document.getElementById('#defaultCanvas0')
 const mobileMessage=document.getElementById('#mobile-message')
 
+
 if (deviceType() == "tablet" || deviceType() == "mobile") {
   canvas.remove();
+  document.body.style.style.backgroundColor="black"
   mobileMessage.style.display="block"
 }
 
