@@ -1,25 +1,25 @@
-const { Body } = require("matter");
+// const { Body } = require("matter");
 
-const deviceType = () => {
-  const ua = navigator.userAgent;
-  if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
-      return "tablet";
-  }
-  else if (/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
-      return "mobile";
-  }
-  return "desktop";
-};
+// const deviceType = () => {
+//   const ua = navigator.userAgent;
+//   if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+//       return "tablet";
+//   }
+//   else if (/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
+//       return "mobile";
+//   }
+//   return "desktop";
+// };
 
-const canvas = document.getElementById('#defaultCanvas0')
-const mobileMessage=document.getElementById('#mobile-message')
+// const canvas = document.getElementById('#defaultCanvas0')
+// const mobileMessage=document.getElementById('#mobile-message')
 
 
-if (deviceType() == "tablet" || deviceType() == "mobile") {
-  canvas.remove();
-  document.body.style.style.backgroundColor="black"
-  mobileMessage.style.display="block"
-}
+// if (deviceType() == "tablet" || deviceType() == "mobile") {
+//   canvas.remove()
+//   document.body.style.style.backgroundColor="black"
+//   mobileMessage.style.display="block"
+// }
 
 
 
