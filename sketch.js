@@ -50,16 +50,21 @@ let colorGauge;
 
 
 function preload(){
+  
   myFont=loadFont('./RedHatMono.ttf')
   song=loadSound('./audio/xylophone.mp3')
 }
 
+
+
+
 function setup() {
 
-  frameRate(60)
-  createCanvas(windowWidth, windowHeight, WEBGL);
+frameRate(60)
+ const canvas=createCanvas(windowWidth, windowHeight, WEBGL);
+ canvas.mousePressed=(userStartAudio())
   background(0);
-  song.loop();
+  song.loop()
   randomColorVal = Math.random()*255
   to=color(237, 181, 252)
   from=color(0, 67, 255)
