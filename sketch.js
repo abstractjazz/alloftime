@@ -51,8 +51,8 @@ let colorGauge;
 
 function preload(){
   
-  myFont=loadFont('./RedHatMono.ttf')
-  song=loadSound('./audio/xylophone.mp3')
+  myFont=loadFont('./RadioCanada.ttf')
+  song=loadSound('https://ik.imagekit.io/a9ltbtydo/sizzle-video/xylophone.mp3')
 }
 
 
